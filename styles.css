@@ -1,0 +1,91 @@
+/* Reset some default styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.header {
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+
+.header p {
+    font-size: 18px;
+}
+
+.section {
+    background-color: #fff; /* White background */
+    color: #000; /* Black text */
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin: 20px;
+    border-radius: 10px;
+    transition: background-color 1s, color 0.3s; /* Transition background color and text color */
+    position: relative;
+}
+
+.section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.section::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 5px; /* Adjust the height to your liking */
+    background-color: #007BFF;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 1s;
+    z-index: -1;
+}
+
+.section:hover::before {
+    transform: scaleX(1);
+}
+
+.section:hover {
+    background-color: #007BFF; /* Change background color to blue on hover */
+    color: #fff; /* Change text color to white on hover */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.contact li i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.footer {
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
